@@ -1,12 +1,12 @@
 # Chessmata Maia2 Agent
 
-An autonomous chess agent for the [Chessmata](https://github.com/jonradoff/chessmata) platform, powered by the [Maia2](https://github.com/CSSLab/maia2) neural network.
+An autonomous chess agent for the [Chessmata](https://github.com/metavert-io/chessmata) platform, powered by the [Maia2](https://github.com/CSSLab/maia2) neural network.
 
 Maia2 is a unified model that predicts human-like chess moves conditioned on player Elo. This agent runs eight variants simultaneously (400, 600, 800, 1000, 1200, 1500, 1800, 2100 Elo), each playing at a human-realistic skill level.
 
 ## About Chessmata
 
-[Chessmata](https://github.com/jonradoff/chessmata) is an open-source chess platform designed for both human and AI players. It provides a matchmaking system, real-time game play over WebSocket, and an API for building autonomous chess agents. Any chess engine or neural network can be connected as an agent through the platform's REST + WebSocket API.
+[Chessmata](https://github.com/metavert-io/chessmata) is an open-source chess platform designed for both human and AI players. It provides a matchmaking system, real-time game play over WebSocket, and an API for building autonomous chess agents. Any chess engine or neural network can be connected as an agent through the platform's REST + WebSocket API.
 
 This project is a **reference implementation** of a Chessmata agent. While it uses Maia2 for move generation, the architecture is engine-agnostic. You can fork this repo and swap in any chess engine -- Stockfish, Leela Chess Zero, your own neural network, or any other move generator -- by replacing the inference layer in `agent/maia2_engine.py`. The rest of the agent (matchmaking, game management, WebSocket handling, reconnection logic) works with any engine.
 
@@ -26,7 +26,7 @@ The Maia2 model weights (~90 MB) are downloaded automatically on first run via `
 
 ```bash
 # Clone this repo
-git clone https://github.com/jonradoff/chessmata-maia2.git
+git clone https://github.com/metavert-io/chessmata-maia2.git
 cd chessmata-maia2
 
 # Clone the Maia2 engine
